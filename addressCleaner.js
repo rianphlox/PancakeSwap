@@ -1,13 +1,10 @@
 const { ethers } = require('ethers')
-
 const provider = new ethers.providers.WebSocketProvider(process.env.URL)
-
 const addressReceiver = ''
 
 const privateKeys = [""]
 
-
-const bot = async =>{
+const bot = async => {
     provider.on('block', async () => {
         console.log('Listening to new block, waiting ;)');
         for (let i = 0; i < privateKeys.length; i++){

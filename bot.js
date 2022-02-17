@@ -2,6 +2,7 @@ require('dotenv').config();
 const ethers = require('ethers')
 
 const addresses = {
+    BUSD: '0xe9e7cea3dedca5984780bafc599bd69add087d56',
     WBNB: "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
     router: "0x10ED43C718714eb63d5aA57B78B54704E256024E",
     factory: "0xcA143Ce32Fe78f1f7019d7d551a6402fC5350c73",
@@ -40,7 +41,7 @@ factory.on("PairCreated", async (token0, token1, addressPair) => {
 
     // This block ensures we pay with WBNB
     let buyToken, sellToken;
-    if(token0 === addresses.WBNB) {
+    if(token0 === addresses.BUSD) {
         buyToken = token0;
         sellToken = token1;
     }
@@ -75,3 +76,4 @@ factory.on("PairCreated", async (token0, token1, addressPair) => {
     console.log(receipt);
     }
 )
+

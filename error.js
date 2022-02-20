@@ -97,7 +97,7 @@ router.swapExactTokensForTokens(
     { gasLimit: transaction.gasLimit, gasPrice: transaction.gasPrice, nonce: curNonce}
   ),
 
-setTimeout(function () {console.log(`Attempting to place a buy order...`)}, 500),
+setTimeout(function () {console.log(`Attempting to place a buy order...`)}, 500)
 
   // CHECK AMOUNT BOUGHT
   // Is there an easier way? Like an output from the buying TX? e.g. tx = router.swapExactTokensForTokens and then receipt = tx.wait()? I saw that in another snipped, but never got the code to work, so no idea if amount bought is included here

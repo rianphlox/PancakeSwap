@@ -1,6 +1,6 @@
 require('dotenv').config();
-var Web3 = require("web3");
-var url = process.env.URL;
+const Web3 = require("web3");
+const url = process.env.URL;
 
 
 const addresses = {
